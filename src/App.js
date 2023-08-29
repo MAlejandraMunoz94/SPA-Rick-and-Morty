@@ -5,6 +5,7 @@ import About from "./views/About.jsx";
 import Detail from "./views/Detail.jsx";
 import Error from "./views/Error.jsx";
 import Form from './views/Form';
+import Favorites from "./views/Favorites"
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -71,6 +72,7 @@ function onClose (idd){
             <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/detail/:id" element={<Detail/>} />
+            <Route path= "/favorites" element= {<Favorites onClose={onClose}/>} />
             <Route path="/" element={<Form logIn={logIn} />} />
             <Route path= "*" element={<Error/>}/>
          </Routes>

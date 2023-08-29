@@ -11,6 +11,9 @@ function Nav({onSearch,logOut}){
         <NavLink to = "/home">
         <button>Home</button>
         </NavLink>
+        <NavLink to = "/favorites">
+        <button>Favorites</button>
+        </NavLink>
         <button onClick={logOut} >Log Out</button>
         <SearchBar onSearch={onSearch}/>
         </div>
