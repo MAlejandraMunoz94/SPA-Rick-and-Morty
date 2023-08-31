@@ -11,6 +11,8 @@ import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import {Routes, Route} from "react-router-dom"
+import {useDispatch } from "react-redux"
+import { removeFav } from './redux/actions';
 
 function App() {
 
@@ -60,9 +62,13 @@ if (exist === false){
 };
 };
 
+const dispatch = useDispatch();
+
 function onClose (idd){
-  const filtro = characters.filter( element => element.id !== parseInt(idd))
+  const filtro = characters.filter( element => element.id !== Number(idd))
   setCharacters(filtro);
+  dispatch(removeFav(idd));
+
 };
 
    return (

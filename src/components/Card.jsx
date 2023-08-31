@@ -34,12 +34,13 @@ function Card({props,onClose}) {
          <button onClick={()=> onClose(id)}>X</button>
          {isFav ? (<button onClick={handleFavorite}>❤️</button>):(<button onClick={handleFavorite}>🤍</button>)}
          <Link to = {"/detail/"+id}>
-         <h2 className="card-name">Name:{name} </h2>
+         <h2 className="card-name">Name: {name}</h2>
          </Link>
-         <h3>Status:{status}</h3>
-         <h3>Specie:{species}</h3>
-         <h3>Gender:{gender}</h3>
-         <h3>Origin:{origin.name}</h3>
+         <h3>{id}</h3>
+         <h3>Status: {status}</h3>
+         <h3>Species: {species}</h3>
+         <h3>Gender: {gender}</h3>
+         <h3>Origin: {origin.name}</h3>
          <img src={image} alt='' />
       </div>
    );

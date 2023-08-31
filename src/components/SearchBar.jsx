@@ -17,7 +17,7 @@ function random (){
    return (
       <div>
          <input id='search' value={id} onChange={handleChange} />
-         <button onClick={()=> onSearch(id)}>Agregar</button>
+         <button onClick={()=> onSearch(id)}>Add Character</button>
          <button onClick={random}>Random</button>
       </div>
    );
