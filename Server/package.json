@@ -1,0 +1,19 @@
+{
+  "name": "rickandmorty",
+  "version": "1.0.0",
+  "description": "server del proyecto rickandmorty",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.js"
+  },
+  "author": "mariaAlejandraMuñoz",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "nodemon": "^3.0.1"
+  }
+}
