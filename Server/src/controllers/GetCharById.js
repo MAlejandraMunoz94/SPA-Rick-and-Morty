@@ -20,16 +20,12 @@ async function getCharById(req, res) {
     };
 
     if (character.name) {
-      return res.status(200).json(character);
+      res.status(200).json(character);
     } else {
-      throw new Error("Character not found");
+      res.status(404).send("Not found");
     }
   } catch (error) {
-    if (error.message === "Character not found") {
-      return res.status(404).send(error.message);
-    } else {
-      return res.status(500).send(error.message);
-    }
+    res.status(500).send(error.message);
   }
 }
 
